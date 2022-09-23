@@ -1,0 +1,22 @@
+scripted :
+node{
+    stage{"git"}
+      {
+       sh "yum install git -y"
+       }
+     stage{"jenkins"}
+      {
+       sh "yum install jenkins -y"
+       }
+      }
+      
+Declarative
+pipeline{
+        agent any
+        stages{
+              stage("git)
+              {
+                steps{
+                      sh "yum install git -y"
+                      }
+               }
